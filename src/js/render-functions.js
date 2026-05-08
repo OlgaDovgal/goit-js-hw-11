@@ -1,5 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 const imagesListEl = document.querySelector('.gallery');
+const loaderEl = document.querySelector('.loader');
 let lightbox = null;
 function createGallery(images) {
   const markup = images.map(
@@ -43,9 +44,9 @@ function clearGallery() {
   imagesListEl.innerHTML = '';
 }
 function showLoader() {
-  document.querySelector('.loader').classList.add('shown');
+  loaderEl.classList.add('shown');
 }
 function hideLoader() {
-  document.querySelector('.loader').classList.remove('shown');
+  loaderEl.classList.remove('shown');
 }
 export { createGallery, clearGallery, showLoader, hideLoader };
