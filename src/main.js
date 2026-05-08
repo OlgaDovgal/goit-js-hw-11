@@ -19,8 +19,7 @@ formSend.addEventListener('submit', event => {
   showLoader();
   getImagesByQuery(queryWord)
     .then(response => {
-      hideLoader();
-      const images = response.data.hits;
+      const images = response.hits;
       if (images.length === 0) {
         iziToast.error({
           message:
@@ -33,11 +32,13 @@ formSend.addEventListener('submit', event => {
       }
     })
     .catch(error => {
-      hideLoader();
       iziToast.error({
         message: 'Oops! Something went wrong. Plese try again.',
         position: 'topRight',
       });
       console.error(error);
+    })
+    .finally(() => {
+      hideLoader();
     });
 });
