@@ -22,10 +22,10 @@ function createGallery(images) {
         src="${webformatURL}"
         alt="${tags}"/>
         <ul class="gallery-image-props-list">
-        <li class="image-prop-item"><p>Likes</p><p>${likes}</p></li>
-        <li class="image-prop-item"><p>Views</p><p>${views}</p></li>
-        <li class="image-prop-item"><p>Comments</p><p>${comments}</p></li>
-        <li class="image-prop-item"><p>Downloads</p><p>${downloads}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Likes</p><p>${likes}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Views</p><p>${views}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Comments</p><p>${comments}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Downloads</p><p>${downloads}</p></li>
         </ul>
         
     </a>
