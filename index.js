@@ -5,12 +5,12 @@ import{S as m,a as d,i as n}from"./assets/vendor-5bY836Yj.js";(function(){const 
         src="${o}"
         alt="${e}"/>
         <ul class="gallery-image-props-list">
-        <li class="image-prop-item"><p>Likes</p><p>${t}</p></li>
-        <li class="image-prop-item"><p>Views</p><p>${a}</p></li>
-        <li class="image-prop-item"><p>Comments</p><p>${p}</p></li>
-        <li class="image-prop-item"><p>Downloads</p><p>${u}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Likes</p><p>${t}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Views</p><p>${a}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Comments</p><p>${p}</p></li>
+        <li class="image-prop-item"><p class="item-prop-txt">Downloads</p><p>${u}</p></li>
         </ul>
         
     </a>
-  </li>`);c.insertAdjacentHTML("afterbegin",r.join("")),f.refresh()}function y(){c.innerHTML=""}function h(){document.querySelector(".loader").classList.add("shown")}function l(){document.querySelector(".loader").classList.remove("shown")}const L="51673072-147ff944173cdc3a3c30b0c98",S="https://pixabay.com/api";function q(s){return d.get(S,{params:{key:L,q:s,image_type:"photo",orientation:"horizontal",safesearch:!0}})}const b=document.querySelector(".form");b.addEventListener("submit",s=>{s.preventDefault();const r=document.querySelector('input[name="search-text"]').value.trim();r&&(y(),h(),q(r).then(o=>{l();const i=o.data.hits;i.length===0?n.error({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"}):(g(i),document.querySelector('input[name="search-text"]').focus())}).catch(o=>{l(),n.error({message:"Oops! Something went wrong. Plese try again.",position:"topRight"}),console.error(o)}))});
+  </li>`);c.insertAdjacentHTML("afterbegin",r.join("")),f.refresh()}function y(){c.innerHTML=""}function h(){document.querySelector(".loader").classList.add("shown")}function l(){document.querySelector(".loader").classList.remove("shown")}const L="51673072-147ff944173cdc3a3c30b0c98",S="https://pixabay.com/api";function q(s){return d.get(S,{params:{key:L,q:s,image_type:"photo",orientation:"horizontal",safesearch:!0}})}const x=document.querySelector(".form");x.addEventListener("submit",s=>{s.preventDefault();const r=document.querySelector('input[name="search-text"]').value.trim();r&&(y(),h(),q(r).then(o=>{l();const i=o.data.hits;i.length===0?n.error({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"}):(g(i),document.querySelector('input[name="search-text"]').focus())}).catch(o=>{l(),n.error({message:"Oops! Something went wrong. Plese try again.",position:"topRight"}),console.error(o)}))});
 //# sourceMappingURL=index.js.map
