@@ -1,9 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 const imagesListEl = document.querySelector('.gallery');
-let lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-});
+let lightbox = null;
 function createGallery(images) {
   const markup = images.map(
     ({
@@ -33,7 +30,14 @@ function createGallery(images) {
     }
   );
   imagesListEl.insertAdjacentHTML('afterbegin', markup.join(''));
-  lightbox.refresh();
+  if (!lightbox) {
+    let lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionDelay: 250,
+    });
+  } else {
+    lightbox.refresh();
+  }
 }
 function clearGallery() {
   imagesListEl.innerHTML = '';
