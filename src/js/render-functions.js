@@ -31,7 +31,7 @@ function createGallery(images) {
   );
   imagesListEl.insertAdjacentHTML('afterbegin', markup.join(''));
   if (!lightbox) {
-    let lightbox = new SimpleLightbox('.gallery a', {
+    lightbox = new SimpleLightbox('.gallery a', {
       captionsData: 'alt',
       captionDelay: 250,
     });
