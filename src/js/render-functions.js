@@ -30,13 +30,13 @@ function createGallery(images) {
     }
   );
   imagesListEl.insertAdjacentHTML('afterbegin', markup.join(''));
-  if (!lightbox) {
+  if (lightbox) {
+    lightbox.refresh();
+  } else {
     lightbox = new SimpleLightbox('.gallery a', {
       captionsData: 'alt',
       captionDelay: 250,
     });
-  } else {
-    lightbox.refresh();
   }
 }
 function clearGallery() {
